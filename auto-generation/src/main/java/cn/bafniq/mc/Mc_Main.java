@@ -16,7 +16,7 @@ import cn.bafniq.common.util.PropertiesUtil;
  * @Author wmang
  * @Date 2011年第一版，2014第二版，2015年第三版
  */
-public class Mc_Neusoft {
+public class Mc_Main {
 	/*******************
 	 * 下面4项必须人工填********************* 原则上
 	 * service,dao的Spring访问beanName的来源，取表名的除了T开头以外的字符

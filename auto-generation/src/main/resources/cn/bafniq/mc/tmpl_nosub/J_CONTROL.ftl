@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
 import ${basePack}.${modulePack}.web.core.service.${table.tableNameJavaFU}MgrService;
 import ${basePack}.framework.rpc.api.dto.request.GridQueryRequest;
 import ${basePack}.framework.rpc.api.facade.GridQueryFacade;
 import com.neusoft.cs.core.service.BasePlamGridService;
 import com.neusoft.cs.core.controller.UserContextController;
 import com.neusoft.framework.api.dto.response.BasePageResponse;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.neusoft.framework.api.dto.response.BodyData;
 import com.neusoft.framework.utils.FastJSONHelper;
 import com.neusoft.framework.utils.ListCarrier;

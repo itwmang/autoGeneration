@@ -1,6 +1,6 @@
 package ${basePack}.${modulePack}.api.facade;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
 import com.neusoft.framework.api.facade.BaseMgrFacade;
 
  /**

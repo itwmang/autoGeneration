@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.neusoft.framework.api.exchanger.AbstractExchanger;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.AbstractExchanger;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
 import ${basePack}.${modulePack}.core.biz.${m.classNameFU}Biz;
 

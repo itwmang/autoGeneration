@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import ${basePack}.${modulePack}.api.facade.${table.tableNameJavaFU}Facade;
 import ${basePack}.${modulePack}.web.core.service.${table.tableNameJavaFU}MgrService;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
 import ${basePack}.${modulePack}.api.facade.${table.tableNameJavaFU}Facade;
 import com.neusoft.framework.api.facade.BaseMgrFacade;
 import com.neusoft.cs.core.service.AbstractMgrService;

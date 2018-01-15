@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import ${basePack}.${modulePack}.web.core.service.${m.classNameFU}MgrService;
 import com.neusoft.cs.core.controller.BaseController;
 import com.neusoft.framework.api.dto.response.BasePageResponse;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.neusoft.framework.api.dto.response.BodyData;
 import com.midea.css.common.exception.BaseException;
 import com.neusoft.framework.utils.FastJSONHelper;

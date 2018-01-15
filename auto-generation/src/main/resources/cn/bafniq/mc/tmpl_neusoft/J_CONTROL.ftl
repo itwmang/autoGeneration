@@ -1,4 +1,4 @@
-package ${basePack}.core.controller.${modulePack}.${table.modelNameLow};
+package ${basePack}.${modulePack}.web.core.controller.${table.modelNameLow};
 
 import java.util.Arrays;
 import java.util.List;

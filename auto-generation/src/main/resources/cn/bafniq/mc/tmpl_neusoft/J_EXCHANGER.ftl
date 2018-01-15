@@ -1,4 +1,4 @@
-package ${basePack}.core.exchanger.${modulePack};
+package ${basePack}.${modulePack}.core.exchanger;
 
 import java.util.Map;
 
@@ -13,6 +13,8 @@ import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.table
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}Exchanger类 
+ * Copyright: ${copyRight}
+ * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

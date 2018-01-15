@@ -1,13 +1,11 @@
 package ${basePack}.${modulePack}.core.service.${table.modelNameLow};
 
-import ${basePack}.${modulePack}.api.entity.${table.modelNameLow}.${table.tableNameJavaFU};
-import com.neusoft.framework.api.service.BaseService;
+import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
+import com.wmang.mode.utils.base.BaseService;
 
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}Service类
- * Copyright: ${copyRight}
- * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

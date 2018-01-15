@@ -1,6 +1,6 @@
 package ${basePack}.${modulePack}.core.biz;
 
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
  /**
  * Copyright: ${copyRight}

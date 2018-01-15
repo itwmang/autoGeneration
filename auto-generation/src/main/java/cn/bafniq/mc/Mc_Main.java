@@ -64,34 +64,20 @@ public class Mc_Main {
 	/********************************************************/
 	public static String[] tmplFileNames = { "J_DB", "J_VO", "J_MAPPER", "J_CUSTOMMAPPER",
 			"mysql".equals(databaseType) ? "X_MAPPER_MYSQL" : "X_MAPPER_ORACLE", "X_CUSTOMMAPPER", "J_EXCHANGER",
-			"J_CONTROL", "mysql".equals(databaseType) ? "S_SQL_MYSQL" : "S_SQL_ORACLE", "X_CONFIG", "P_LIST",
-			"P_LIST_JS", "P_VIEW", "P_VIEW_JS", "J_SERVICE", "J_SERVICEIMPL", "J_MGRSERVICE", "J_MGRSERVICEIMPL",
-			"J_BIZ", "J_BIZIMPL", "J_FACADE", "J_FACADEIMPL", "P_JSON", "J_TEST_BIZ", "J_TEST_CONTROL", "J_TEST_FACADE",
-			"J_TEST_MAPPER", "J_TEST_MGRSERVICE", "J_TEST_SERVICE" };
+			"J_CONTROL", "mysql".equals(databaseType) ? "S_SQL_MYSQL" : "S_SQL_ORACLE", "J_SERVICE", "J_SERVICEIMPL", 
+			"J_BIZ", "J_BIZIMPL" };
 
 	public static String[] outFileNames = { "${TABLE_NAME_JAVA}.java", "${TABLE_NAME_JAVA}VO.java",
 			"${TABLE_NAME_JAVA}Mapper.java", "${TABLE_NAME_JAVA}ExtMapper.java", "${TABLE_NAME_JAVA}Mapper.xml",
 			"${TABLE_NAME_JAVA}ExtMapper.xml", "${TABLE_NAME_JAVA}Exchanger.java", "${TABLE_NAME_JAVA}Controller.java",
-			"${TABLE_NAME}.sql", "config.txt", "${SUBMODEL_NAME_LOWER}_list.jsp", "${MODULE_NAME_LOWER}_list.js",
-			"${MODULE_NAME_LOWER}_edit.jsp", "${MODULE_NAME_LOWER}_edit.js", "${TABLE_NAME_JAVA}Service.java",
-			"${TABLE_NAME_JAVA}ServiceImpl.java", "${TABLE_NAME_JAVA}MgrService.java",
-			"${TABLE_NAME_JAVA}MgrServiceImpl.java", "${TABLE_NAME_JAVA}Biz.java", "${TABLE_NAME_JAVA}BizImpl.java",
-			"${TABLE_NAME_JAVA}Facade.java", "${TABLE_NAME_JAVA}FacadeImpl.java", "${TABLE_NAME_LOWER}.json",
-			"${TABLE_NAME_JAVA}BizTest.java", "${TABLE_NAME_JAVA}ControllerTest.java",
-			"${TABLE_NAME_JAVA}FacadeTest.java", "${TABLE_NAME_JAVA}MapperTest.java",
-			"${TABLE_NAME_JAVA}MgrServiceTest.java", "${TABLE_NAME_JAVA}ServiceTest.java" };
+			"${TABLE_NAME}.sql",  "${TABLE_NAME_JAVA}Service.java",
+			"${TABLE_NAME_JAVA}ServiceImpl.java",  "${TABLE_NAME_JAVA}Biz.java", "${TABLE_NAME_JAVA}BizImpl.java" };
 
-	public static String[] packages = { "rpc.api.entity.${MODULE_NAME_LOWER}", "rpc.api.dto.vo.${MODULE_NAME_LOWER}",
-			"rpc.core.dao.${MODULE_NAME_LOWER}", "rpc.core.dao.${MODULE_NAME_LOWER}", "rpc.sqlmaps", "rpc.sqlmaps",
-			"rpc.core.exchanger", "web.${MODULE_PACKAGE}.web.controller.${MODULE_NAME_LOWER}", "", "",
-			"web.views.${MODULE_PACKAGE}.${MODULE_NAME_LOWER}", "web.js.${MODULE_PACKAGE}.${MODULE_NAME_LOWER}",
-			"web.views.${MODULE_PACKAGE}.${MODULE_NAME_LOWER}", "web.js.${MODULE_PACKAGE}.${MODULE_NAME_LOWER}",
-			"rpc.core.service.${MODULE_NAME_LOWER}", "rpc.core.service.impl.${MODULE_NAME_LOWER}",
-			"web.${MODULE_PACKAGE}.web.service.${MODULE_NAME_LOWER}", "web.${MODULE_PACKAGE}.web.service.impl.${MODULE_NAME_LOWER}",
-			"rpc.core.biz.${MODULE_NAME_LOWER}", "rpc.core.biz.impl.${MODULE_NAME_LOWER}", "rpc.api.facade.${MODULE_NAME_LOWER}",
-			"rpc.core.facade.impl.${MODULE_NAME_LOWER}", "zother", "test.${MODULE_NAME_LOWER}",
-			"test.${MODULE_NAME_LOWER}", "test.${MODULE_NAME_LOWER}", "test.${MODULE_NAME_LOWER}",
-			"test.${MODULE_NAME_LOWER}", "test.${MODULE_NAME_LOWER}", };
+	public static String[] packages = { "mode.entity.${MODULE_NAME_LOWER}", "mode.dto.vo.${MODULE_NAME_LOWER}",
+			"core.dao.${MODULE_NAME_LOWER}", "core.dao.${MODULE_NAME_LOWER}", "rpc.sqlmaps", "rpc.sqlmaps",
+			"core.exchanger", "web.${MODULE_PACKAGE}.web.controller.${MODULE_NAME_LOWER}", 
+			"core.service.${MODULE_NAME_LOWER}", "core.service.impl.${MODULE_NAME_LOWER}",
+			"core.biz.${MODULE_NAME_LOWER}", "core.biz.impl.${MODULE_NAME_LOWER}"};
 
 	public static void writeFile() throws Exception {
 		List<McTable> listTable = new ArrayList<McTable>();

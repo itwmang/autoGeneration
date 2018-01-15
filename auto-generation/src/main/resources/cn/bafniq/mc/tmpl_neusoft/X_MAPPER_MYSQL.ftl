@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}Mapper">
+<mapper namespace="${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}Mapper">
 
 	<!-- ********************** 以下部分为代码自动生成，不能修改！！！ ********************************** -->
 
-	<resultMap id="baseResultMap" type="${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU}">
+	<resultMap id="baseResultMap" type="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
 		<id column="${table.pkColumn.nameLow}" property="${table.pkColumn.nameJavaFL}" />		<!-- ${table.pkColumn.comment} -->
 		<#list listMcColumn as column>
 			<#if column.nameUp!=table.pkColumn.nameUp>
@@ -30,24 +30,12 @@
 		where ${table.pkColumn.nameLow} = ${r"#"}{${table.pkColumn.nameJavaFL}}
 	</delete>
 
-	<insert id="save" useGeneratedKeys="false" keyProperty="${table.pkColumn.nameJavaFL}" parameterType="${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU}">
+	<insert id="save" <#if table.pkColumn.typeJava=="Long">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" <#elseif table.pkColumn.typeJava=="Integer">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" </#if>parameterType="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
 		insert into ${table.tableNameLow}
 		(<include refid="baseColumnList" />
 		)
 		values
-		(	<#list listMcColumn as column>${r"#"}{${column.nameJavaFL},jdbcType=${column.typeJdbc}}<#if column_has_next>,<#if ((column_index+1)%3==0)>${"\n\t\t\t"}</#if></#if></#list>
-		)
-	</insert>
-	
-	<insert id="insertWithSequence" useGeneratedKeys="false" keyProperty="${table.pkColumn.nameJavaFL}" parameterType="${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU}">
-		<selectKey resultType="String"  keyProperty="${table.pkColumn.nameJavaFL}" order="BEFORE">
-			select seq_${table.tableNameLow}.nextval from dual
-		</selectKey>
-		insert into ${table.tableNameLow}
-		(<include refid="baseColumnList" />
-		)
-		values
-		(	<#list listMcColumn as column>${r"#"}{${column.nameJavaFL},jdbcType=${column.typeJdbc}}<#if column_has_next>,<#if ((column_index+1)%3==0)>${"\n\t\t\t"}</#if></#if></#list>
+		(	<#list listMcColumn as column>${r"#"}{${column.nameJavaFL}}<#if column_has_next>,<#if ((column_index+1)%5==0)>${"\n\t\t\t"}</#if></#if></#list>
 		)
 	</insert>
 
@@ -59,7 +47,7 @@
 					<#list listMcColumn as column>
 						<#if column.nameUp!=table.pkColumn.nameUp>
 					<when test="column=='${column.nameLow}' || column=='${column.nameJavaFL}'">
-						${column.nameLow}=${r"#"}{record.${column.nameJavaFL},jdbcType=${column.typeJdbc}}
+						${column.nameLow}=${r"#"}{record.${column.nameJavaFL}}
 					</when>
 						</#if>
 					</#list>
@@ -69,9 +57,9 @@
 		where ${table.pkColumn.nameLow} = ${r"#"}{record.${table.pkColumn.nameJavaFL}}
 	</update>
 
-	<update id="update" parameterType="${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU}">
+	<update id="update" parameterType="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
 		update ${table.tableNameLow}
-		set <#list listMcColumn as column>${column.nameLow}=${r"#"}{${column.nameJavaFL},jdbcType=${column.typeJdbc}}<#if column_has_next>,<#if ((column_index+1)%3==0)>${"\n\t\t\t"}</#if></#if></#list>
+		set <#list listMcColumn as column>${column.nameLow}=${r"#"}{${column.nameJavaFL}}<#if column_has_next>,<#if ((column_index+1)%5==0)>${"\n\t\t\t"}</#if></#if></#list>
 		where ${table.pkColumn.nameLow} = ${r"#"}{${table.pkColumn.nameJavaFL}}
 	</update>
 	

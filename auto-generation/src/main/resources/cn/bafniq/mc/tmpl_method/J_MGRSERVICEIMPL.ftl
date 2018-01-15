@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 import ${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade;
 import ${basePack}.${modulePack}.web.core.service.${m.classNameFU}MgrService;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
 import com.neusoft.framework.utils.Constants;
 

@@ -1,7 +1,7 @@
 package ${basePack}.${modulePack}.api.facade;
 
 import com.neusoft.framework.api.facade.BaseMgrFacade;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
 
  /**

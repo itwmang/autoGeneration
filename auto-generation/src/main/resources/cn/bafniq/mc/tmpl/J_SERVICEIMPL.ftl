@@ -5,18 +5,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.api.entity.${table.modelNameLow}.${table.tableNameJavaFU};
-import com.neusoft.framework.api.dao.BaseMapper;
+import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
+import com.wmang.mode.utils.base.BaseMapper;
 import ${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}Mapper;
 import ${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}ExtMapper;
-import com.neusoft.framework.api.service.AbstractService;
+import com.wmang.mode.utils.base.AbstractService;
 import ${basePack}.${modulePack}.core.service.${table.modelNameLow}.${table.tableNameJavaFU}Service;
 
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}ServiceImpl类
- * Copyright: ${copyRight}
- * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

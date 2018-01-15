@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import ${basePack}.${modulePack}.api.entity.${table.tableNameJavaFU};
+import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
 import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}Mapper;
 import com.neusoft.framework.utils.FastJSONHelper;
 

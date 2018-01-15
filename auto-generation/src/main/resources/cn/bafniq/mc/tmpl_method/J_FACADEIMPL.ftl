@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import ${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade;
 import ${basePack}.${modulePack}.core.biz.${m.classNameFU}Biz;
-import com.neusoft.framework.api.biz.BaseMgrBiz;
+import com.wmang.mode.utils.base.BaseMgrBiz;
 import com.neusoft.framework.api.facade.AbstractMgrFacade;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
 
  /**

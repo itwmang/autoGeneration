@@ -1,4 +1,4 @@
-package ${basePack}.mode.entity.${modulePack}.${table.modelNameLow};
+package ${basePack}.${modulePack}.mode.entity.${table.modelNameLow};
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -7,6 +7,8 @@ import java.util.Date;
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}Entity类,工具生成，请勿修改  
+ * Copyright: ${copyRight}
+ * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

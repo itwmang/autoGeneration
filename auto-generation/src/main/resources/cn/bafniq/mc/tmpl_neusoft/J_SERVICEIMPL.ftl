@@ -1,20 +1,20 @@
-package ${basePack}.${modulePack}.core.service.impl;
+package ${basePack}.${modulePack}.core.service.impl.${table.modelNameLow};
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
 import com.neusoft.framework.api.dao.BaseMapper;
-import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}Mapper;
-import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}ExtMapper;
+import ${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}Mapper;
+import ${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}ExtMapper;
 import com.wmang.mode.utils.base.AbstractService;
-import ${basePack}.${modulePack}.core.service.${table.tableNameJavaFU}Service;
+import ${basePack}.${modulePack}.core.service.${table.modelNameLow}.${table.tableNameJavaFU}Service;
 
  /**
  * Title: ${table.tableComment}
- * <p>Description: ${table.tableComment}ServiceImpl类</p>
+ * Description: ${table.tableComment}ServiceImpl类
  * Copyright: ${copyRight}
  * Company: ${company}
  * @Author: ${author}

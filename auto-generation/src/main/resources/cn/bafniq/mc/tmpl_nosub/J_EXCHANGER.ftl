@@ -4,10 +4,10 @@ import java.util.Map;
 
 import com.neusoft.framework.utils.DateUtil;
 import com.neusoft.framework.utils.ValueUtil;
-import com.neusoft.framework.api.exchanger.AbstractExchanger;
+import com.wmang.mode.utils.base.AbstractExchanger;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.api.entity.${table.tableNameJavaFU};
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
 
 
  /**

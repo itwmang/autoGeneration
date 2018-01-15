@@ -1,4 +1,4 @@
-package ${basePack}.core.biz.impl.${modulePack}.${table.modelNameLow};
+package ${basePack}.${modulePack}.core.biz.impl.${table.modelNameLow};
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +21,8 @@ import ${basePack}.${modulePack}.core.service.${table.modelNameLow}.${table.tabl
  /**
  * Title: ${table.tableComment}
  * <p>Description: ${table.tableComment}BizImpl类</p>
+ * Copyright: ${copyRight}
+ * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

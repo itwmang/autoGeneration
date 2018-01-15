@@ -1,11 +1,11 @@
-package ${basePack}.${modulePack}.core.service;
+package ${basePack}.${modulePack}.core.service.${table.modelNameLow};
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
 import com.wmang.mode.utils.base.BaseService;
 
  /**
  * Title: ${table.tableComment}
- * <p>Description: ${table.tableComment}Service类</p>
+ * Description: ${table.tableComment}Service类
  * Copyright: ${copyRight}
  * Company: ${company}
  * @Author: ${author}

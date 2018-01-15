@@ -8,13 +8,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.api.entity.${table.tableNameJavaFU};
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
 import ${basePack}.${modulePack}.core.exchanger.${table.tableNameJavaFU}Exchanger;
-import com.neusoft.framework.api.exchanger.AbstractExchanger;
-import com.neusoft.framework.api.dto.response.BaseResponse;
-import com.neusoft.framework.api.biz.AbstractBaseMgrBiz;
-import com.neusoft.framework.api.service.BaseService;
+import com.wmang.mode.utils.base.AbstractExchanger;
+import com.wmang.mode.utils.base.BaseResponse;
+import com.wmang.mode.utils.base.AbstractBaseMgrBiz;
+import com.wmang.mode.utils.base.BaseService;
 import ${basePack}.${modulePack}.core.biz.${table.tableNameJavaFU}Biz;
 import ${basePack}.${modulePack}.core.service.${table.tableNameJavaFU}Service;
 

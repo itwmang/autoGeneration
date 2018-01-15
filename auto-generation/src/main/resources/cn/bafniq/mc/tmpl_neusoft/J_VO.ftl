@@ -7,6 +7,8 @@ import java.util.Date;
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}VO类
+ * Copyright: ${copyRight}
+ * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

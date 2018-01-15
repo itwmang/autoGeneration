@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
 import ${basePack}.${modulePack}.api.facade.${table.modelNameLow}.${table.tableNameJavaFU}Facade;
-import com.neusoft.framework.api.biz.BaseMgrBiz;
+import com.wmang.mode.utils.base.BaseMgrBiz;
 import com.neusoft.framework.api.facade.AbstractMgrFacade;
 import ${basePack}.${modulePack}.core.biz.${table.modelNameLow}.${table.tableNameJavaFU}Biz;
 

@@ -1,13 +1,11 @@
-package ${basePack}.${modulePack}.core.biz.${table.modelNameLow};
+package ${basePack}.core.biz.${modulePack}.${table.modelNameLow};
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import com.neusoft.framework.api.biz.BaseMgrBiz;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
+import com.wmang.mode.utils.base.BaseMgrBiz;
 
  /**
  * Title: ${table.tableComment}
- * <p>Description: ${table.tableComment}Biz类</p>
- * Copyright: ${copyRight}
- * Company: ${company}
+ * Description: ${table.tableComment}Biz类
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿

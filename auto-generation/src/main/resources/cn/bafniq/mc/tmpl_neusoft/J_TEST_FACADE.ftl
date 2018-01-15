@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import ${basePack}.${modulePack}.api.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
 import ${basePack}.${modulePack}.api.facade.${table.tableNameJavaFU}Facade;
-import com.neusoft.framework.api.dto.response.BaseResponse;
+import com.wmang.mode.utils.base.BaseResponse;
 import com.neusoft.framework.utils.FastJSONHelper;
 
 @RunWith(SpringJUnit4ClassRunner.class)

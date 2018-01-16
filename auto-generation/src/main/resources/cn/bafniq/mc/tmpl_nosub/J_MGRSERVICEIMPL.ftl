@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.web.core.service.impl;
+package ${basePack}.web.core.service.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,11 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.api.facade.${table.tableNameJavaFU}Facade;
-import ${basePack}.${modulePack}.web.core.service.${table.tableNameJavaFU}MgrService;
+import ${basePack}.api.facade.${table.tableNameJavaFU}Facade;
+import ${basePack}.web.core.service.${table.tableNameJavaFU}MgrService;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.api.facade.${table.tableNameJavaFU}Facade;
+import ${basePack}.mode.dto.vo.${table.tableNameJavaFU}VO;
+import ${basePack}.api.facade.${table.tableNameJavaFU}Facade;
 import com.neusoft.framework.api.facade.BaseMgrFacade;
 import com.neusoft.cs.core.service.AbstractMgrService;
 

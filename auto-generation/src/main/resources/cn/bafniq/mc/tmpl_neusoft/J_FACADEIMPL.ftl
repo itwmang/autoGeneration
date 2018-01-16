@@ -1,15 +1,15 @@
-package ${basePack}.${modulePack}.core.facade.impl.${table.modelNameLow};
+package ${basePack}.core.facade.impl.${table.modelNameLow};
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.api.facade.${table.modelNameLow}.${table.tableNameJavaFU}Facade;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
+import ${basePack}.api.facade.${modulePack}.${table.tableNameJavaFU}Facade;
 import com.wmang.mode.utils.base.BaseMgrBiz;
 import com.neusoft.framework.api.facade.AbstractMgrFacade;
-import ${basePack}.${modulePack}.core.biz.${table.modelNameLow}.${table.tableNameJavaFU}Biz;
+import ${basePack}.core.biz.${modulePack}.${table.tableNameJavaFU}Biz;
 
  /**
  * Title: ${table.tableComment}

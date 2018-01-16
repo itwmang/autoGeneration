@@ -34,7 +34,7 @@ public class Mc_Main {
 	// 二级模块 如user,role,storage,
 	// 例如@Component(value="resSuppUserService")
 	public static String moduleName = StringUtils.isEmpty(PropertiesUtil.getKeyValue("mc.package.subsystem"))?"":PropertiesUtil.getKeyValue("mc.package.subsystem");
-	// 表名
+	// 表名tableName
 	public static String tableName = "";
 	// 表描述
 	public static String tableComment = "";
@@ -58,12 +58,12 @@ public class Mc_Main {
 
 	public static String projectPath=System.getProperty("user.dir").replace("\\", "/");
 	// 模板文件位置
-	public static String tmplFilePath = projectPath+"/src/main/resources/cn/bafniq/mc/tmpl_nosub";
+	public static String tmplFilePath = projectPath+"/src/main/resources/cn/bafniq/mc/tmpl";
 
 	public static String baseMapperPackage = PropertiesUtil.getKeyValue("mc.baseMapper.package");
 	/********************************************************/
 	public static String[] tmplFileNames = { "J_DB", "J_VO", "J_MAPPER", "J_CUSTOMMAPPER",
-			"mysql".equals(databaseType) ? "X_MAPPER_MYSQL" : "X_MAPPER_ORACLE", "X_CUSTOMMAPPER", "J_EXCHANGER",
+			"mysql".equals(databaseType) ? "X_MAPPER_MYSQL" : "X_MAPPER_ORACLE", "X_CUSTOMMAPPER","J_EXCHANGER",
 			"J_CONTROL", "mysql".equals(databaseType) ? "S_SQL_MYSQL" : "S_SQL_ORACLE", "J_SERVICE", "J_SERVICEIMPL", 
 			"J_BIZ", "J_BIZIMPL" };
 
@@ -73,11 +73,11 @@ public class Mc_Main {
 			"${TABLE_NAME}.sql",  "${TABLE_NAME_JAVA}Service.java",
 			"${TABLE_NAME_JAVA}ServiceImpl.java",  "${TABLE_NAME_JAVA}Biz.java", "${TABLE_NAME_JAVA}BizImpl.java" };
 
-	public static String[] packages = { "mode.entity.${MODULE_NAME_LOWER}", "mode.dto.vo.${MODULE_NAME_LOWER}",
-			"core.dao.${MODULE_NAME_LOWER}", "core.dao.${MODULE_NAME_LOWER}", "rpc.sqlmaps", "rpc.sqlmaps",
-			"core.exchanger", "web.${MODULE_PACKAGE}.web.controller.${MODULE_NAME_LOWER}", 
-			"core.service.${MODULE_NAME_LOWER}", "core.service.impl.${MODULE_NAME_LOWER}",
-			"core.biz.${MODULE_NAME_LOWER}", "core.biz.impl.${MODULE_NAME_LOWER}"};
+	public static String[] packages = { "mode.entity.${MODULE_PACKAGE}", "mode.dto.vo.${MODULE_PACKAGE}",
+			"core.dao.${MODULE_PACKAGE}", "core.dao.${MODULE_PACKAGE}", "sqlmaps", "sqlmaps",
+			"core.exchanger.${MODULE_PACKAGE}", "core.controller.${MODULE_PACKAGE}","sql", 
+			"core.service.${MODULE_PACKAGE}", "core.service.impl.${MODULE_PACKAGE}",
+			"core.biz.${MODULE_PACKAGE}", "core.biz.impl.${MODULE_PACKAGE}"};
 
 	public static void writeFile() throws Exception {
 		List<McTable> listTable = new ArrayList<McTable>();
@@ -112,6 +112,7 @@ public class Mc_Main {
 						map.put("author", author);
 						map.put("basePack", basePack);
 						map.put("modulePack", modulePack);
+						map.put("subModelName", subModelName);
 						map.put("baseMapperPackage", baseMapperPackage);
 						System.out.println(map.toString());
 						
@@ -119,9 +120,7 @@ public class Mc_Main {
 						String content = McFreeMarkerUtil.getContent(tmplFilePath,tmplFileNames[i], map);
 //						String content = McFreeMarkerUtil.getContent(tmplFileNames[i], map);
 						String outFullPath = McFile.createPath(outFilePath,
-								packages[i].replace("${MODULE_NAME_LOWER}", moduleName.toLowerCase())
-										.replace("${SUBMODEL_NAME_LOWER}", subModelName.toLowerCase())
-										.replace("${MODULE_PACKAGE}", modulePack.toLowerCase()));
+								packages[i].replace("${MODULE_PACKAGE}", modulePack.toLowerCase()));
 						String outFile = outFullPath + "/" + outFileNames[i]
 								.replace("${TABLE_NAME_JAVA}", McUtil.toJavaFirstUpper(table.getTableName()))
 								.replace("${TABLE_NAME_JAVA_FL}", McUtil.toJavaFirstLower(table.getTableName()))
@@ -150,10 +149,10 @@ public class Mc_Main {
 		table.setTableNameJavaFU(McUtil.toJavaFirstUpper(tableName));
 		table.setTableComment(tableComment);
 		table.setClassPath(classPack);
-		table.setModelNameUp(moduleName.toUpperCase());
-		table.setModelNameLow(moduleName.toLowerCase());
-		table.setModelNameJavaFL(McUtil.toJavaFirstLower(moduleName));
-		table.setModelNameJavaFU(McUtil.toJavaFirstUpper(moduleName));
+		table.setModelNameUp(tableName.toUpperCase());
+		table.setModelNameLow(McUtil.toJavaFirstLower(tableName));
+		table.setModelNameJavaFL(McUtil.toJavaFirstLower(tableName));
+		table.setModelNameJavaFU(McUtil.toJavaFirstUpper(tableName));
 		table.setSubmodelName(subModelName);
 		table.setSubmodelNameLow(subModelName.toLowerCase());
 		table.setSubmodelNameUp(subModelName.toUpperCase());

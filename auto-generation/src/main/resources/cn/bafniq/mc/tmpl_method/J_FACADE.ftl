@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.api.facade;
+package ${basePack}.api.facade;
 
 import com.neusoft.framework.api.facade.BaseMgrFacade;
 import com.wmang.mode.utils.base.BaseResponse;

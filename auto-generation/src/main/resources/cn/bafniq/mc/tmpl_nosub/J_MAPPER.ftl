@@ -1,7 +1,7 @@
-package ${basePack}.${modulePack}.core.dao;
+package ${basePack}.core.dao;
 
 import org.springframework.stereotype.Component;
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.mode.entity.${table.tableNameJavaFU};
 import ${baseMapperPackage}.BaseMapper;
 
  /**

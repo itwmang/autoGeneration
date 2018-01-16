@@ -7,14 +7,14 @@
 		return super.success(response);
 	}
 <#elseif type=="J_CONTROL.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_MGRSERVICE">
 	/** ${m.methodComment} */
 	public BaseResponse<${m.responseNameFU}Response> ${m.methodName}(${m.requestNameFU}Request request, String userAccount) throws BaseException,Exception;
 <#elseif type=="J_MGRSERVICE.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_MGRSERVICEIMPL">
 	/** ${m.methodComment} */
 	@Override
@@ -37,14 +37,14 @@ import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
 		return response;
 	}
 <#elseif type=="J_MGRSERVICEIMPL.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_FACADE">
 	/** ${m.methodComment} */
 	public ${m.responseNameFU}Response ${m.methodName}(${m.requestNameFU}Request request) throws BaseException,Exception;
 <#elseif type=="J_FACADE.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_FACADEIMPL">
 	/** ${m.methodComment} */
 	@Override
@@ -52,14 +52,14 @@ import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
 		return ${m.classNameFL}Biz.${m.methodName}(request);
 	}
 <#elseif type=="J_FACADEIMPL.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_BIZ">
 	/** ${m.methodComment} */
 	public ${m.responseNameFU}Response ${m.methodName}(${m.requestNameFU}Request request) throws BaseException,Exception;
 <#elseif type=="J_BIZ.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_BIZIMPL">
 	/** ${m.methodComment} */
 	@Override
@@ -68,8 +68,8 @@ import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
 		return null;
 	}
 <#elseif type=="J_BIZIMPL.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="J_FACADETEST">
 	@Test
 	/** ${m.methodComment} */
@@ -87,11 +87,11 @@ import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
 		}
 	}
 <#elseif type=="J_FACADETEST.import">
-import ${basePack}.${modulePack}.api.dto.response.${m.responseNameFU}Response;
-import ${basePack}.${modulePack}.api.dto.request.${m.requestNameFU}Request;
+import ${basePack}.api.dto.response.${m.responseNameFU}Response;
+import ${basePack}.api.dto.request.${m.requestNameFU}Request;
 <#elseif type=="X_DUBBOSERVICE">
-	<dubbo:service ref="${m.classNameFL}Facade" interface="${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade" timeout="5000" />
-	<bean id="${m.classNameFL}Facade" class="${basePack}.${modulePack}.core.facade.impl.${m.classNameFU}FacadeImpl" />
+	<dubbo:service ref="${m.classNameFL}Facade" interface="${basePack}.api.facade.${m.classNameFU}Facade" timeout="5000" />
+	<bean id="${m.classNameFL}Facade" class="${basePack}.core.facade.impl.${m.classNameFU}FacadeImpl" />
 <#elseif type=="X_DUBBOCLIENT">
-	<dubbo:reference id="${m.classNameFL}Facade" interface="${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade" />
+	<dubbo:reference id="${m.classNameFL}Facade" interface="${basePack}.api.facade.${m.classNameFU}Facade" />
 <#else></#if>

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import ${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade;
+import ${basePack}.api.facade.${m.classNameFU}Facade;
 import com.neusoft.framework.utils.FastJSONHelper;
 import com.midea.css.common.exception.BaseException;
 

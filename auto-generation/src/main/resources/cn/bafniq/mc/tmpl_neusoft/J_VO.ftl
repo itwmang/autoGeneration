@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow};
+package ${basePack}.mode.dto.vo.${table.modelNameLow};
 
 import java.io.Serializable;
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.${table.submodelNameLow};
+package ${basePack}.${table.submodelNameLow};
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
-import ${basePack}.${modulePack}.core.service.${table.tableNameJavaFU}Service;
+import ${basePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.core.service.${table.tableNameJavaFU}Service;
 import com.midea.css.common.dao.CommonExample;
 import com.neusoft.framework.utils.FastJSONHelper;
 

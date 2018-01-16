@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.core.biz;
+package ${basePack}.core.biz;
 
 import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;

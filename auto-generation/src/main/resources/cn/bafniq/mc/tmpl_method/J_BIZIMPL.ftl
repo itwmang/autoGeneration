@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.core.biz.impl;
+package ${basePack}.core.biz.impl;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.wmang.mode.utils.base.AbstractExchanger;
 import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
-import ${basePack}.${modulePack}.core.biz.${m.classNameFU}Biz;
+import ${basePack}.core.biz.${m.classNameFU}Biz;
 
  /**
  * Copyright: ${copyRight}

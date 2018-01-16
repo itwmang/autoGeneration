@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.web.core.controller.${table.modelNameLow};
+package ${basePack}.web.core.controller.${table.modelNameLow};
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.web.core.service.${table.modelNameLow}.${table.tableNameJavaFU}MgrService;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
+import ${basePack}.web.core.service.${modulePack}.${table.tableNameJavaFU}MgrService;
 import ${basePack}.framework.rpc.api.dto.request.GridQueryRequest;
 import ${basePack}.framework.rpc.api.facade.GridQueryFacade;
 import com.neusoft.cs.core.service.BasePlamGridService;

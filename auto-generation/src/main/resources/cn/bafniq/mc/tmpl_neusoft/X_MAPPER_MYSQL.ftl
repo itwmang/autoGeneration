@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="${basePack}.${modulePack}.core.dao.${table.modelNameLow}.${table.tableNameJavaFU}Mapper">
+<mapper namespace="${basePack}.core.dao.${modulePack}.${table.tableNameJavaFU}Mapper">
 
 	<!-- ********************** 以下部分为代码自动生成，不能修改！！！ ********************************** -->
 
-	<resultMap id="baseResultMap" type="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
+	<resultMap id="baseResultMap" type="${basePack}.mode.entity.${modulePack}.${table.tableNameJavaFU};">
 		<id column="${table.pkColumn.nameLow}" property="${table.pkColumn.nameJavaFL}" />		<!-- ${table.pkColumn.comment} -->
 		<#list listMcColumn as column>
 			<#if column.nameUp!=table.pkColumn.nameUp>
@@ -30,7 +30,7 @@
 		where ${table.pkColumn.nameLow} = ${r"#"}{${table.pkColumn.nameJavaFL}}
 	</delete>
 
-	<insert id="save" <#if table.pkColumn.typeJava=="Long">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" <#elseif table.pkColumn.typeJava=="Integer">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" </#if>parameterType="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
+	<insert id="save" <#if table.pkColumn.typeJava=="Long">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" <#elseif table.pkColumn.typeJava=="Integer">useGeneratedKeys="true" keyProperty="${table.pkColumn.nameJavaFL}" </#if>parameterType="${basePack}.mode.entity.${modulePack}.${table.tableNameJavaFU};">
 		insert into ${table.tableNameLow}
 		(<include refid="baseColumnList" />
 		)
@@ -57,7 +57,7 @@
 		where ${table.pkColumn.nameLow} = ${r"#"}{record.${table.pkColumn.nameJavaFL}}
 	</update>
 
-	<update id="update" parameterType="${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};">
+	<update id="update" parameterType="${basePack}.mode.entity.${modulePack}.${table.tableNameJavaFU};">
 		update ${table.tableNameLow}
 		set <#list listMcColumn as column>${column.nameLow}=${r"#"}{${column.nameJavaFL}}<#if column_has_next>,<#if ((column_index+1)%5==0)>${"\n\t\t\t"}</#if></#if></#list>
 		where ${table.pkColumn.nameLow} = ${r"#"}{${table.pkColumn.nameJavaFL}}

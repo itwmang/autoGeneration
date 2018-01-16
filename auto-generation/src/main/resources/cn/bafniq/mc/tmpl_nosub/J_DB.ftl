@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.mode.entity;
+package ${basePack}.mode.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

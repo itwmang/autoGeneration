@@ -2,12 +2,12 @@ package ${basePack}.core.exchanger.${modulePack};
 
 import java.util.Map;
 
-import com.neusoft.framework.utils.DateUtil;
-import com.neusoft.framework.utils.ValueUtil;
+import com.wmang.logis.mode.utils.DateUtil;
+import com.wmang.logis.mode.utils.ValueUtil;
 import com.wmang.mode.utils.base.AbstractExchanger;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
+import ${basePack}.mode.entity.${modulePack}.${table.tableNameJavaFU};
 
 
  /**

@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.core.biz.impl.${table.modelNameLow};
+package ${basePack}.core.biz.impl.${table.modelNameLow};
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,15 +8,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.mode.entity.${table.modelNameLow}.${table.tableNameJavaFU};
-import ${basePack}.${modulePack}.core.exchanger.${table.tableNameJavaFU}Exchanger;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
+import ${basePack}.mode.entity.${modulePack}.${table.tableNameJavaFU};
+import ${basePack}.core.exchanger.${table.tableNameJavaFU}Exchanger;
 import com.wmang.mode.utils.base.AbstractExchanger;
 import com.wmang.mode.utils.base.BaseResponse;
 import com.wmang.mode.utils.base.AbstractBaseMgrBiz;
 import com.wmang.mode.utils.base.BaseService;
-import ${basePack}.${modulePack}.core.biz.${table.modelNameLow}.${table.tableNameJavaFU}Biz;
-import ${basePack}.${modulePack}.core.service.${table.modelNameLow}.${table.tableNameJavaFU}Service;
+import ${basePack}.core.biz.${modulePack}.${table.tableNameJavaFU}Biz;
+import ${basePack}.core.service.${modulePack}.${table.tableNameJavaFU}Service;
 
  /**
  * Title: ${table.tableComment}

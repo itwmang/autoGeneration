@@ -1,16 +1,16 @@
-package ${basePack}.${modulePack}.core.service.impl;
+package ${basePack}.core.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.mode.entity.${table.tableNameJavaFU};
 import com.neusoft.framework.api.dao.BaseMapper;
-import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}Mapper;
-import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}ExtMapper;
+import ${basePack}.core.dao.${table.tableNameJavaFU}Mapper;
+import ${basePack}.core.dao.${table.tableNameJavaFU}ExtMapper;
 import com.wmang.mode.utils.base.AbstractService;
-import ${basePack}.${modulePack}.core.service.${table.tableNameJavaFU}Service;
+import ${basePack}.core.service.${table.tableNameJavaFU}Service;
 
  /**
  * Title: ${table.tableComment}

@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.${table.submodelNameLow};
+package ${basePack}.${table.submodelNameLow};
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
-import ${basePack}.${modulePack}.core.dao.${table.tableNameJavaFU}Mapper;
+import ${basePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.core.dao.${table.tableNameJavaFU}Mapper;
 import com.neusoft.framework.utils.FastJSONHelper;
 
 @RunWith(SpringJUnit4ClassRunner.class)

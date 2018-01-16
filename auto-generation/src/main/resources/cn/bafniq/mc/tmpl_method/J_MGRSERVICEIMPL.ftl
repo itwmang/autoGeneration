@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.web.core.service.impl;
+package ${basePack}.web.core.service.impl;
 
 import java.util.Date;
 import java.util.ArrayList;
@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ${basePack}.${modulePack}.api.facade.${m.classNameFU}Facade;
-import ${basePack}.${modulePack}.web.core.service.${m.classNameFU}MgrService;
+import ${basePack}.api.facade.${m.classNameFU}Facade;
+import ${basePack}.web.core.service.${m.classNameFU}MgrService;
 import com.wmang.mode.utils.base.BaseResponse;
 import com.midea.css.common.exception.BaseException;
 import com.neusoft.framework.utils.Constants;

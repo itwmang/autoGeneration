@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.web.core.controller;
+package ${basePack}.web.core.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ${basePack}.${modulePack}.web.core.service.${m.classNameFU}MgrService;
+import ${basePack}.web.core.service.${m.classNameFU}MgrService;
 import com.neusoft.cs.core.controller.BaseController;
 import com.neusoft.framework.api.dto.response.BasePageResponse;
 import com.wmang.mode.utils.base.BaseResponse;

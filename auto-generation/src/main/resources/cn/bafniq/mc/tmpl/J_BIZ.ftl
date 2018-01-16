@@ -1,6 +1,6 @@
-package ${basePack}.core.biz.${modulePack}.${table.modelNameLow};
+package ${basePack}.core.biz.${modulePack};
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
 import com.wmang.mode.utils.base.BaseMgrBiz;
 
  /**

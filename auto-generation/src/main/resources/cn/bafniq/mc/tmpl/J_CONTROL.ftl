@@ -1,4 +1,4 @@
-package ${basePack}.core.controller.${modulePack}.${table.modelNameLow};
+package ${basePack}.core.controller.${modulePack};
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,33 +16,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
-import ${basePack}.${modulePack}.web.core.service.${table.modelNameLow}.${table.tableNameJavaFU}MgrService;
-import ${basePack}.framework.rpc.api.dto.request.GridQueryRequest;
-import ${basePack}.framework.rpc.api.facade.GridQueryFacade;
-import com.neusoft.cs.core.service.BasePlamGridService;
-import com.neusoft.cs.core.controller.UserContextController;
-import com.neusoft.framework.api.dto.response.BasePageResponse;
-import com.wmang.mode.utils.base.BaseResponse;
-import com.neusoft.framework.api.dto.response.BodyData;
-import com.neusoft.framework.utils.FastJSONHelper;
-import com.neusoft.framework.utils.ListCarrier;
-import com.neusoft.framework.utils.ValueUtil;
+import com.wmang.logis.core.controller.BaseController;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
+import ${basePack}.core.biz.${modulePack}.${table.tableNameJavaFU}Biz;
+import ${baseMapperPackage}.BaseResponse;
+import ${baseMapperPackage}.BodyData;
+import ${basePack}.mode.utils.FastJSONHelper;
+import ${basePack}.mode.utils.ListCarrier;
+import ${basePack}.mode.utils.ValueUtil;
 
  /**
  * Title: ${table.tableComment}
  * Description: ${table.tableComment}Controller类
- * Copyright: ${copyRight}
- * Company: ${company}
  * @Author: ${author}
  * @CreateDate: ${.now?string("yyyy-MM")}
  * @version 1.0 初稿
  */
 @Controller
-public class ${table.tableNameJavaFU}Controller extends UserContextController {
+public class ${table.tableNameJavaFU}Controller extends BaseController{
 	
 	@Autowired
-	private ${table.tableNameJavaFU}MgrService ${table.tableNameJavaFL}MgrService;
+	private ${table.tableNameJavaFU}Biz ${table.tableNameJavaFL}Biz;
 	
 	/** 新增_打开界面 */
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/add", method = RequestMethod.GET)
@@ -55,21 +48,21 @@ public class ${table.tableNameJavaFU}Controller extends UserContextController {
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/save", method = RequestMethod.POST)
 	@ResponseBody
 	public BodyData save(@RequestBody ${table.tableNameJavaFU}VO vo) throws Exception {
-		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}MgrService.save(vo, super.getUserAccount());
+		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}Biz.save(vo, "");
 		return super.success(response);
 	}
 	
 	/** 更新_打开界面 */
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/edit/{id}", method = RequestMethod.GET)
 	public String toupdate(@PathVariable("id") ${table.pkColumn.typeJava} id,Model model) throws Exception {
-		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}MgrService.findOne(id);
+		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}Biz.findOne(id);
 		model.addAttribute("modelFromServer", FastJSONHelper.serialize(response.getReturnObject()));
 		return "/${modulePack}/${table.modelNameLow}/${table.modelNameLow}_edit";
 	}
 	/** 查看_打开界面 */
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/view/{id}", method = RequestMethod.GET)
 	public String toview(@PathVariable("id") ${table.pkColumn.typeJava} id,Model model) throws Exception {
-		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}MgrService.findOne(id);
+		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}Biz.findOne(id);
 		model.addAttribute("modelFromServer", FastJSONHelper.serialize(response.getReturnObject()));
 		model.addAttribute("operate", "view");
 		return "/${modulePack}/${table.modelNameLow}/${table.modelNameLow}_edit";
@@ -79,14 +72,14 @@ public class ${table.tableNameJavaFU}Controller extends UserContextController {
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/update", method = RequestMethod.POST)
 	@ResponseBody
 	public BodyData update(@RequestBody ${table.tableNameJavaFU}VO vo) throws Exception {
-		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}MgrService.update(vo, super.getUserAccount());
+		BaseResponse<${table.tableNameJavaFU}VO> response=${table.tableNameJavaFL}Biz.update(vo, "");
 		return super.success(response);
 	}
 	
 	/** 删除 */
 	@RequestMapping(value = "/${modulePack}/${table.modelNameLow}/delete", method = RequestMethod.POST)
 	@ResponseBody
-	public BodyData delete(@RequestParam("ids") @NotEmpty(message="id不能为空") String ids) throws Exception {
+	public BodyData delete(@RequestParam("ids")  String ids) throws Exception {
 		List<${table.pkColumn.typeJava}> listId=new ListCarrier<String, ${table.pkColumn.typeJava}>() {
 			@Override
 			public ${table.pkColumn.typeJava} carry(String source) throws Exception {
@@ -99,7 +92,7 @@ public class ${table.tableNameJavaFU}Controller extends UserContextController {
 				</#if>
 			}
 		}.carryList(Arrays.asList(ids.split(",")));
-		BaseResponse<List<${table.pkColumn.typeJava}>> response=${table.tableNameJavaFL}MgrService.delete(listId, super.getUserAccount());
+		BaseResponse<List<${table.pkColumn.typeJava}>> response=${table.tableNameJavaFL}Biz.delete(listId, "");
 		return super.success(response);
 	}
 }

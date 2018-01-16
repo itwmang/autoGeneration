@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.core.dao.${table.modelNameLow};
+package ${basePack}.core.dao.${table.modelNameLow};
 
 import org.springframework.stereotype.Component;
 

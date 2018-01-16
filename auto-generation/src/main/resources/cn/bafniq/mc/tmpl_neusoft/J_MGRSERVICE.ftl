@@ -1,6 +1,6 @@
-package ${basePack}.${modulePack}.web.core.service.${table.modelNameLow};
+package ${basePack}.web.core.service.${table.modelNameLow};
 
-import ${basePack}.${modulePack}.mode.dto.vo.${table.modelNameLow}.${table.tableNameJavaFU}VO;
+import ${basePack}.mode.dto.vo.${modulePack}.${table.tableNameJavaFU}VO;
 import com.neusoft.cs.core.service.BaseMgrService;
 
  /**

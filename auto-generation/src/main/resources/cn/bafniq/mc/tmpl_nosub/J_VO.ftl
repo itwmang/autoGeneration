@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.mode.dto.vo;
+package ${basePack}.mode.dto.vo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

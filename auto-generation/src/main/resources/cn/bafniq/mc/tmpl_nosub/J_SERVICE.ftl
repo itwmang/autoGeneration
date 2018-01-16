@@ -1,6 +1,6 @@
-package ${basePack}.${modulePack}.core.service;
+package ${basePack}.core.service;
 
-import ${basePack}.${modulePack}.mode.entity.${table.tableNameJavaFU};
+import ${basePack}.mode.entity.${table.tableNameJavaFU};
 import com.wmang.mode.utils.base.BaseService;
 
  /**

@@ -1,4 +1,4 @@
-package ${basePack}.${modulePack}.api.dto.request;
+package ${basePack}.api.dto.request;
 
 import java.io.Serializable;
 import java.util.Date;

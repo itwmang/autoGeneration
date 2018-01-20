@@ -30,8 +30,8 @@ public class SysUserExchanger extends AbstractExchanger<SysUserVO,SysUser> {
 		vo.setUserStatus(db.getUserStatus());
 		vo.setPhone(db.getPhone());
 		vo.setAddress(db.getAddress());
-		vo.setVersion(db.getVersion());
-		vo.setVersionStr(DateUtil.DateToString(db.getVersion(), "yyyy-MM-dd HH:mm:ss"));
+		vo.setLastupdatePasswd(db.getLastupdatePasswd());
+		vo.setLastupdatePasswdStr(DateUtil.DateToString(db.getLastupdatePasswd(), "yyyy-MM-dd HH:mm:ss"));
 		vo.setPubValidly(db.getPubValidly());
 		vo.setPubRemark(db.getPubRemark());
 		vo.setPubCreatePerson(db.getPubCreatePerson());
@@ -53,10 +53,10 @@ public class SysUserExchanger extends AbstractExchanger<SysUserVO,SysUser> {
 		db.setUserStatus(vo.getUserStatus());
 		db.setPhone(vo.getPhone());
 		db.setAddress(vo.getAddress());
-		if (vo.getVersion()!=null) {
-			db.setVersion(vo.getVersion());
+		if (vo.getLastupdatePasswd()!=null) {
+			db.setLastupdatePasswd(vo.getLastupdatePasswd());
 		} else {
-			db.setVersion(ValueUtil.toDateNull(vo.getVersionStr()));
+			db.setLastupdatePasswd(ValueUtil.toDateNull(vo.getLastupdatePasswdStr()));
 		}
 		db.setPubValidly(vo.getPubValidly());
 		db.setPubRemark(vo.getPubRemark());
@@ -85,8 +85,8 @@ public class SysUserExchanger extends AbstractExchanger<SysUserVO,SysUser> {
 		vo.setUserStatus(ValueUtil.toStr(map.get("userStatus")));
 		vo.setPhone(ValueUtil.toStr(map.get("phone")));
 		vo.setAddress(ValueUtil.toStr(map.get("address")));
-		vo.setVersion(ValueUtil.toDateNull(map.get("version")));
-		vo.setVersionStr(DateUtil.DateToString(vo.getVersion(), "yyyy-MM-dd HH:mm:ss"));
+		vo.setLastupdatePasswd(ValueUtil.toDateNull(map.get("lastupdatePasswd")));
+		vo.setLastupdatePasswdStr(DateUtil.DateToString(vo.getLastupdatePasswd(), "yyyy-MM-dd HH:mm:ss"));
 		vo.setPubValidly(ValueUtil.toStr(map.get("pubValidly")));
 		vo.setPubRemark(ValueUtil.toStr(map.get("pubRemark")));
 		vo.setPubCreatePerson(ValueUtil.toStr(map.get("pubCreatePerson")));

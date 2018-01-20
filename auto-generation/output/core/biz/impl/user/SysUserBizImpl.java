@@ -30,7 +30,7 @@ public class SysUserBizImpl extends AbstractBaseMgrBiz<SysUserVO,SysUser,Integer
 	
 	protected static Logger logger = LoggerFactory.getLogger(SysUserBizImpl.class);
 	
-	protected static List<String> updateColumns=Arrays.asList(SysUser.account_,SysUser.name_,SysUser.passwd_,SysUser.email_,SysUser.userType_,SysUser.userStatus_,SysUser.phone_,SysUser.address_,SysUser.version_,SysUser.pubValidly_,SysUser.pubRemark_,SysUser.pubCreatePerson_,SysUser.pubCreateDate_,SysUser.pubModiPerson_,SysUser.pubModiDate_);
+	protected static List<String> updateColumns=Arrays.asList(SysUser.account_,SysUser.name_,SysUser.passwd_,SysUser.email_,SysUser.userType_,SysUser.userStatus_,SysUser.phone_,SysUser.address_,SysUser.lastupdatePasswd_,SysUser.pubValidly_,SysUser.pubRemark_,SysUser.pubCreatePerson_,SysUser.pubCreateDate_,SysUser.pubModiPerson_,SysUser.pubModiDate_);
 	
 	@Autowired
 	private SysUserService sysUserService;

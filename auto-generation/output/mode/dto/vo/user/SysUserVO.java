@@ -36,13 +36,13 @@ public class SysUserVO implements Serializable {
 	/** 家庭地址 **/
 	private String address;
 	/** 密码最后修改时间 **/
-	private Date version;
+	private Date lastupdatePasswd;
 	/** 密码最后修改时间字符 **/
-	private String versionStr;
+	private String lastupdatePasswdStr;
 	/** 密码最后修改时间开始 **/
-	private String versionBeginStr;
+	private String lastupdatePasswdBeginStr;
 	/** 密码最后修改时间结束 **/
-	private String versionEndStr;
+	private String lastupdatePasswdEndStr;
 	/** 账户是否有效 **/
 	private String pubValidly;
 	/** 备注 **/
@@ -141,36 +141,36 @@ public class SysUserVO implements Serializable {
 		this.address=address;
 	}
 	/** 密码最后修改时间 */
-	public Date getVersion() {
-		return version;
+	public Date getLastupdatePasswd() {
+		return lastupdatePasswd;
 	}
 	/** 密码最后修改时间 */
-	public void setVersion(Date version) {
-		this.version=version;
+	public void setLastupdatePasswd(Date lastupdatePasswd) {
+		this.lastupdatePasswd=lastupdatePasswd;
 	}
 	/** 密码最后修改时间字符 **/
-	public String getVersionStr() {
-		return versionStr;
+	public String getLastupdatePasswdStr() {
+		return lastupdatePasswdStr;
 	}
 	/** 密码最后修改时间字符 **/
-	public void setVersionStr(String versionStr) {
-		this.versionStr=versionStr;
+	public void setLastupdatePasswdStr(String lastupdatePasswdStr) {
+		this.lastupdatePasswdStr=lastupdatePasswdStr;
 	}
 	/** 密码最后修改时间开始 **/
-	public String getVersionBeginStr() {
-		return versionBeginStr;
+	public String getLastupdatePasswdBeginStr() {
+		return lastupdatePasswdBeginStr;
 	}
 	/** 密码最后修改时间开始 **/
-	public void setVersionBeginStr(String versionBeginStr) {
-		this.versionBeginStr=versionBeginStr;
+	public void setLastupdatePasswdBeginStr(String lastupdatePasswdBeginStr) {
+		this.lastupdatePasswdBeginStr=lastupdatePasswdBeginStr;
 	}
 	/** 密码最后修改时间结束 **/
-	public String getVersionEndStr() {
-		return versionEndStr;
+	public String getLastupdatePasswdEndStr() {
+		return lastupdatePasswdEndStr;
 	}
 	/** 密码最后修改时间结束 **/
-	public void setVersionEndStr(String versionEndStr) {
-		this.versionEndStr=versionEndStr;
+	public void setLastupdatePasswdEndStr(String lastupdatePasswdEndStr) {
+		this.lastupdatePasswdEndStr=lastupdatePasswdEndStr;
 	}
 	/** 账户是否有效 */
 	public String getPubValidly() {

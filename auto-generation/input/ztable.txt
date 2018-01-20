@@ -1,14 +1,14 @@
 @@客户主数据表(SYS_USER)
 主键	ID	INTEGER	PK	ID，主键。
 账号	ACCOUNT	VARCHAR2(32)	not-null	用户账号。
-名称	NAME	VARCHAR2(200)	not-null	账号名称。
+名称	NAME_	VARCHAR2(200)	not-null	账号名称。
 密码	PASSWD	VARCHAR2(300)	not-null	账户密码。
 邮箱	EMAIL	VARCHAR2(100)	账户邮箱
 用户类型	USER_TYPE	VARCHAR2(10)	账户密码。
 用户状态	USER_STATUS	VARCHAR2(10)	账户密码。
 电话号码	PHONE	VARCHAR2(30)	电话号码
 家庭地址	ADDRESS	VARCHAR2(200)	家庭地址
-密码最后修改时间	VERSION	DATE	密码最后修改时间
+密码最后修改时间	LASTUPDATE_PASSWD	DATE	密码最后修改时间
 账户是否有效	PUB_VALIDLY	VARCHAR2(10)	账户是否有效
 备注	PUB_REMARK	VARCHAR2(500)	备注
 创建人	PUB_CREATE_PERSON	VARCHAR2(32)	not-null	创建人

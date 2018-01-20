@@ -42,7 +42,7 @@ public class McUtil {
 					if (ValueUtil.isEmpty(column.getFullComment())) {
 						column.setFullComment(columns[0]);
 					}
-					column.setDataType(columns[2]);
+					column.setDataType(type);
 					column.setNameLow(name.toLowerCase());
 					column.setNameUp(name.toUpperCase());
 					column.setNameJavaFL(toJavaFirstLower(name));

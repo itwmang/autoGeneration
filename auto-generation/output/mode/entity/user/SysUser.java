@@ -22,7 +22,7 @@ public class SysUser implements Serializable {
 	/** 账号 */
 	public final static String account_="account";
 	/** 名称 */
-	public final static String name_="name";
+	public final static String name_="name_";
 	/** 密码 */
 	public final static String passwd_="passwd";
 	/** 邮箱 */
@@ -36,7 +36,7 @@ public class SysUser implements Serializable {
 	/** 家庭地址 */
 	public final static String address_="address";
 	/** 密码最后修改时间 */
-	public final static String version_="version";
+	public final static String lastupdatePasswd_="lastupdate_passwd";
 	/** 账户是否有效 */
 	public final static String pubValidly_="pub_validly";
 	/** 备注 */
@@ -69,7 +69,7 @@ public class SysUser implements Serializable {
 	/** 家庭地址 */
 	private String address;
 	/** 密码最后修改时间 */
-	private Date version;
+	private Date lastupdatePasswd;
 	/** 账户是否有效 */
 	private String pubValidly;
 	/** 备注 */
@@ -156,12 +156,12 @@ public class SysUser implements Serializable {
 		this.address=address;
 	}
 	/** 密码最后修改时间 */
-	public Date getVersion() {
-		return version;
+	public Date getLastupdatePasswd() {
+		return lastupdatePasswd;
 	}
 	/** 密码最后修改时间 */
-	public void setVersion(Date version) {
-		this.version=version;
+	public void setLastupdatePasswd(Date lastupdatePasswd) {
+		this.lastupdatePasswd=lastupdatePasswd;
 	}
 	/** 账户是否有效 */
 	public String getPubValidly() {
